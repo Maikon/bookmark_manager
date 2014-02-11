@@ -8,6 +8,7 @@ group :production do
   gem 'dm-postgres-adapter'
 end
 
-group :development do
+group :development, :test do
   gem 'shotgun'
+  gem 'rspec'
 end
