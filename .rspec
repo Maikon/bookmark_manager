@@ -1,2 +1,3 @@
---color
---format progress
+-c
+-f d
+--order default
