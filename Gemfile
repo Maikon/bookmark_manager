@@ -6,6 +6,8 @@ group :production do
   gem 'sinatra'
   gem 'data_mapper'
   gem 'dm-postgres-adapter'
+  gem 'bcrypt-ruby'
+  gem 'rack-flash3'
 end
 
 group :development, :test do
