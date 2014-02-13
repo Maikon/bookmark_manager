@@ -6,10 +6,3 @@ body {
 h1 {
   color: #1d6aad;
 }
-
-#notice {
-  display: inline-block;
-  padding: 5px;
-  border: 2px solid #e13328;
-  border-radius: 5px;
-}
