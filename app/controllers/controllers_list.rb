@@ -1,0 +1,5 @@
+require './app/controllers/application.rb'
+require './app/controllers/tags.rb'
+require './app/controllers/sessions.rb'
+require './app/controllers/links.rb'
+require './app/controllers/users.rb'
