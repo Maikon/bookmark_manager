@@ -8,6 +8,7 @@ group :production do
   gem 'dm-postgres-adapter'
   gem 'bcrypt-ruby'
   gem 'rack-flash3'
+  gem 'sinatra-partial'
 end
 
 group :development, :test do
