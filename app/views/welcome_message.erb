@@ -1,6 +1,5 @@
 <header>
-<%= partial :flash %>
-  <div id="logo">Bookmark Manager</div>
+<div id="logo">Bookmark Manager</div>
   <div id="user-links">
     <% if current_user %>
 
@@ -12,12 +11,12 @@
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Sign out">
       </form>
-      <% else %>
-      <h1>Welcome to Bookmark Manager!</h1>
-    <% end %>
+    <% else %>
     <nav>
       <a id="sign-in" href="/sessions/new">Sign In</a>
       <a id="sign-up" href="/users/new">Sign Up</a>
     </nav>
+
+    <% end %>
   </div>
 </header>
