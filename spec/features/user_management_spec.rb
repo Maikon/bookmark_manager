@@ -9,7 +9,7 @@ feature 'User signs up' do
 
     lambda { sign_up }.should change(User, :count).by(1)
 
-    expect(page).to have_content('Welcome, alice@example.com')
+    expect(page).to have_css('#sign-out')
     expect(User.first.email).to eq('alice@example.com')
   end
 
@@ -37,9 +37,9 @@ feature 'User signs in' do
 
   scenario 'with correct credentials' do
     visit '/'
-    expect(page).not_to have_content('Welcome test@test.com')
+    expect(page).not_to have_css('#sign-out')
     sign_in('test@test.com', 'test')
-    expect(page).to have_content('Welcome, test@test.com')
+    expect(page).to have_css('#sign-out')
   end
 
   scenario 'with incorrect credentials' do

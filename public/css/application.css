@@ -5,12 +5,12 @@ body {
 }
 
 header {
-  background: #1da34b;
   border-bottom: 2px solid #6c797a;
   position: fixed;
   padding: 10px;
   width: 100%;
   top: 0px;
+  background: #1da34b;
 }
 
 main {
@@ -19,13 +19,14 @@ main {
   padding-top: 60px;
   margin-top: 50px;
   height: 2000px;
+  background-image: url(../img/crossword.png);
+  background-repeat: repeat;
 }
 
 #logo {
-  font-size: 32px;
-  position: relative;
+  /*position: relative;*/
   display: inline-block;
-  top: 20px;
+  /*top: 20px;*/
 }
 
 nav {
@@ -40,6 +41,11 @@ a {
   text-decoration: none;
   font-size: 20px;
   text-align: center;
+}
+
+#logo a {
+  font-size: 32px;
+  color: #e8edee;
 }
 
 #sign-in, #sign-up {
@@ -60,4 +66,8 @@ a {
 #notice {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+#welcome-message {
+
 }
