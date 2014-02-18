@@ -10,6 +10,7 @@ header {
   padding: 10px;
   width: 100%;
   top: 0px;
+  height: 80px;
   background: #1da34b;
 }
 
@@ -48,6 +49,11 @@ a {
   color: #e8edee;
 }
 
+input {
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
 #sign-in, #sign-up {
   border: 2px solid #e8edee;
   padding: 5px;
@@ -68,6 +74,20 @@ a {
   margin-bottom: 20px;
 }
 
-#welcome-message {
+form#sign-out {
+  display: inline-block;
+}
 
+input.button_style {
+  border: 2px solid #e8edee;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #e8edee;
+  background: #1da34b;
+}
+
+input.button_style:hover {
+  background: #178940;
+  cursor: pointer;
 }
