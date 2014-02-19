@@ -78,7 +78,7 @@ form#sign-out {
   display: inline-block;
 }
 
-input.button_style {
+input.button_style, .button-highlighted {
   border: 2px solid #e8edee;
   padding: 5px;
   display: inline-block;
@@ -87,6 +87,13 @@ input.button_style {
   background: #1da34b;
 }
 
+.button-highlighted {
+  background: #e0691b;
+}
+
+.button-highlighted:hover {
+  background: #f18b23;
+}
 input.button_style:hover {
   background: #178940;
   cursor: pointer;
