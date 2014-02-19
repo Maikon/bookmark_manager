@@ -7,12 +7,15 @@
   <title>Bookmark Manager</title>
 </head>
 <body>
-<header>
-  <%= partial :welcome_message %>
-</header>
+  <header>
+    <%= partial :welcome_message %>
+  </header>
   <main>
   <%= partial :flash %>
     <%= yield %>
   </main>
+  <footer>
+    <%= partial :footer %>
+  </footer>
 </body>
 </html>

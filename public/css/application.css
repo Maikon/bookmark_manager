@@ -167,3 +167,50 @@ input.button_style:hover {
 .source a:hover {
   color: #202f3f;
 }
+
+/*------ Footer ------*/
+
+footer {
+  display: flex;
+  background-color: #1e963a;
+  width: 100%;
+  border-top: 2px solid #6c797a;
+}
+
+footer > * {
+  margin: auto inherit;
+}
+
+footer img {
+  vertical-align: top;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+
+footer img:hover {
+  border: 1px solid #d75315;
+}
+
+footer #technologies {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+footer p, footer a {
+  padding: 5px 25px;
+  font-size: 16px;
+  color: #e8edee;
+  line-height: 25px;
+}
+
+footer a {
+  margin: 0;
+  padding: 0;
+  color: #202f3f;
+}
+
+footer a:hover {
+  color: #d75315;
+}
