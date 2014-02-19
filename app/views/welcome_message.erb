@@ -1,15 +1,11 @@
+<div id="user-links">
 <div id="logo"><a href="/">Bookmark Manager</a></div>
-  <a href="/links/new" class="button-highlighted">Add New Link</a>
-  <div id="user-links">
     <% if current_user %>
       <form id="sign-out" method="post" action="/sessions">
         <input class="sign-out" type="hidden" name="_method" value="delete">
         <input class="button_style" type="submit" value="Sign out">
       </form>
     <% else %>
-    <nav>
-      <a id="sign-in" href="/sessions/new">Sign In</a>
-      <a id="sign-up" href="/users/new">Sign Up</a>
-    </nav>
+      <%= partial :navigation %>
     <% end %>
   </div>

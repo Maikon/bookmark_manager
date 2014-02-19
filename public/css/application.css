@@ -24,18 +24,20 @@ main {
   background-repeat: repeat;
 }
 
+#user-links {
+  width: 100%;
+  padding-top: 15px;
+}
+
 #logo {
-  /*position: relative;*/
   display: inline-block;
-  /*top: 20px;*/
+  float: left;
 }
 
 nav {
-  float: right;
-  position: relative;
-  right: 10px;
-  bottom: 15px;
-  width: 30%;
+  float: left;
+  width: 65%;
+
 }
 
 a {
@@ -48,20 +50,31 @@ a {
   font-size: 32px;
   color: #e8edee;
 }
+#logo {
+  padding-top: 10px;
+}
 
 input {
   -webkit-appearance: none;
   box-shadow: none !important;
 }
 
-#sign-in, #sign-up {
+#sign-in, #sign-up, #add-link {
   border: 2px solid #e8edee;
   padding: 5px;
   display: inline-block;
-  margin: 5px;
+  margin: 10px;
   border-radius: 5px;
-  width: 40%;
+  width: 20%;
   color: #e8edee;
+}
+
+#sign-in {
+  margin-left: 110px;
+}
+
+#add-link{
+  margin-left: 40px;
 }
 
 #sign-in:hover, #sign-up:hover {
