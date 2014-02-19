@@ -24,6 +24,8 @@ main {
   background-repeat: repeat;
 }
 
+/*------ Navigation ------*/
+
 #user-links {
   width: 100%;
   padding-top: 15px;
@@ -82,11 +84,6 @@ input {
   color: #202f3f;
 }
 
-#notice {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
 form#sign-out {
   display: inline-block;
   margin-left: 30%;
@@ -117,7 +114,14 @@ input.button_style:hover {
   font-size: 18px;
 }
 
-/*------ Links styling ------*/
+/*------ Errors ------*/
+
+#notice {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/*------ Links feed styling ------*/
 
 #links-container {
   width: 80%;
@@ -131,8 +135,35 @@ input.button_style:hover {
   background: #c8f3ca;
   margin: 15px inherit;
   padding: 15px 10px;
-
+  overflow: auto;
 }
+
 .title {
+  color: #d75315;
+}
+
+.title:hover {
+  color: #202f3f;
+}
+
+.link a.title {
+  letter-spacing: 1px;
+}
+
+.link .description {
+  margin: 10px inherit;
+}
+
+.link .source, .source a {
+  float: right;
+  font-size: 16px;
+}
+.source {
+  width: 26%;
+}
+.source a {
+  color: #d75315;
+}
+.source a:hover {
   color: #202f3f;
 }
