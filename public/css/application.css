@@ -116,3 +116,23 @@ input.button_style:hover {
 #sign-out input[type=submit] {
   font-size: 18px;
 }
+
+/*------ Links styling ------*/
+
+#links-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.link {
+  box-shadow: 0 0 5px black;
+  background-image: url(../img/crossword.png);
+  background-repeat: repeat;
+  background: #c8f3ca;
+  margin: 15px inherit;
+  padding: 15px 10px;
+
+}
+.title {
+  color: #202f3f;
+}
