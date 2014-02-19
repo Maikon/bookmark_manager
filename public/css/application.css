@@ -89,6 +89,7 @@ input {
 
 form#sign-out {
   display: inline-block;
+  margin-left: 30%;
 }
 
 input.button_style, .button-highlighted {
@@ -110,4 +111,8 @@ input.button_style, .button-highlighted {
 input.button_style:hover {
   background: #178940;
   cursor: pointer;
+}
+
+#sign-out input[type=submit] {
+  font-size: 18px;
 }

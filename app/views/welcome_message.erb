@@ -1,6 +1,7 @@
 <div id="user-links">
 <div id="logo"><a href="/">Bookmark Manager</a></div>
     <% if current_user %>
+      <a id="add-link" href="/links/new" class="button-highlighted">Add New Link</a>
       <form id="sign-out" method="post" action="/sessions">
         <input class="sign-out" type="hidden" name="_method" value="delete">
         <input class="button_style" type="submit" value="Sign out">

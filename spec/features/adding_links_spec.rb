@@ -1,6 +1,23 @@
 require 'spec_helper'
+require_relative 'helpers/session'
+
+include SessionHelpers
 
 feature 'User adds a new link' do
+  before(:each) do
+    User.create(:email => 'test@test.com',
+                :password => 'test',
+                :password_confirmation => 'test')
+  end
+
+  scenario 'only after signing in' do
+    expect(Link.count).to eq(0)
+    visit '/'
+    expect(page).not_to have_content("Add New Link")
+    sign_in('test@test.com','test')
+    expect(page).to have_content("Add New Link")
+  end
+
   scenario 'when going to the links/new route' do
     expect(Link.count).to eq(0)
     visit '/links/new'
