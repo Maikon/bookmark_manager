@@ -125,6 +125,7 @@ input.button_style:hover {
 
 #notice {
   display: inline-block;
+  margin: 5px;
   margin-bottom: 20px;
 }
 
