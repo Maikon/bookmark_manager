@@ -141,13 +141,16 @@ input.button_style:hover {
 /*------ Errors ------*/
 
 .flash-errors, .flash-notice {
-  text-align: center;
   margin: 5px;
   padding: 5px;
   background-color: rgba(183,78,88,0.75);
   border: 1px solid #b0b6bb;
   border-radius: 0 0 5px rgba(0,0,0,0.4);
   color: white;
+}
+
+.flash-errors li {
+  padding-left: 40%;
 }
 
 /*------ Links feed styling ------*/

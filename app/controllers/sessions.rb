@@ -9,7 +9,7 @@ post '/sessions' do
     session[:user_id] = user.id
     redirect to('/')
   else
-    flash[:errors] = ['The email or password are important']
+    flash.now[:errors] = ['The email or password are incorrect']
     erb :'sessions/new'
   end
 end
