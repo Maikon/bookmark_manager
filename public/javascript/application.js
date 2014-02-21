@@ -1,11 +1,18 @@
 
 function addFavouritesHandler() {
   $('.star.solid').click(function(event){
-    var newOpacity = 1 - parseInt($(this).css('opacity'));
+    var link = $(this).parent();
+    var favourited = !!$(link).data('favourited');
+    var newOpacity = favourited ? 0 : 1;
+    $(link).data('favourited', !favourited);
     $(this).animate({opacity: newOpacity});
   });
 }
 
 $(function(){
   addFavouritesHandler();
+})
+
+$(function(){
+  console.log("Hello");
 })
