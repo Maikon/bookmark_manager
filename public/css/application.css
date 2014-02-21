@@ -205,6 +205,22 @@ input.button_style:hover {
   color: #202f3f;
 }
 
+.link {
+  position: relative;
+}
+
+.link .star {
+  position: absolute;
+  font-size: 24px;
+  right: 8px;
+  top: 8px;
+  color: #eebb2c;
+  cursor: pointer;
+}
+
+.link .star.solid {
+  opacity: 0;
+}
 /*------ Footer ------*/
 
 footer {
