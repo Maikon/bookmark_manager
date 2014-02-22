@@ -9,6 +9,7 @@ group :production do
   gem 'bcrypt-ruby'
   gem 'rack-flash3'
   gem 'sinatra-partial'
+  gem 'poltergeist'
 end
 
 group :development, :test do

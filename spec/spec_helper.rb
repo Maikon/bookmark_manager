@@ -3,8 +3,10 @@ ENV["RACK_ENV"] = 'test'
 require './app/server'
 require 'database_cleaner'
 require 'capybara/rspec'
+require 'capybara/poltergeist'
 
 Capybara.app = Sinatra::Application
+Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

@@ -24,22 +24,33 @@ function showLinkFavouritedNotice (link) {
   }, 1000);
 }
 
-$(function(){
-  addFavouritesHandler();
-});
+function prepareFormHandler () {
+  var form = $('#container #ajax-form form');
+  console.log(form);
+  form.submit(function(event) {
+    var addLink = function(data) {
+      $('#links').prepend(data);
+    };
+    var data = form.serialize();
+    $.post(form.attr('action'), data, addLink);
+    event.preventDefault();
+  });
+}
 
-function prepareNewLinkHandler () {
+function prepareRemoteFormsHandler () {
   $('.add-link, .sign-in, .sign-up').click(function(event) {
     $.get($(this).attr('href'), function(data) {
-      if($('#ajax-form').length == 0){
+      if($('#container #ajax-form').length === 0){
         $('#container').prepend("<div id='ajax-form'></div>");
       }
       $('#container #ajax-form').html(data);
+      prepareFormHandler();
     });
     event.preventDefault();
   });
 }
 
 $(function(){
-  prepareNewLinkHandler();
-})
+  addFavouritesHandler();
+  prepareRemoteFormsHandler();
+});
