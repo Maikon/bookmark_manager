@@ -27,3 +27,19 @@ function showLinkFavouritedNotice (link) {
 $(function(){
   addFavouritesHandler();
 });
+
+function prepareNewLinkHandler () {
+  $('.add-link, .sign-in, .sign-up').click(function(event) {
+    $.get($(this).attr('href'), function(data) {
+      if($('#ajax-form').length == 0){
+        $('#container').prepend("<div id='ajax-form'></div>");
+      }
+      $('#container #ajax-form').html(data);
+    });
+    event.preventDefault();
+  });
+}
+
+$(function(){
+  prepareNewLinkHandler();
+})
