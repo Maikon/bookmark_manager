@@ -26,7 +26,6 @@ function showLinkFavouritedNotice (link) {
 
 function prepareFormHandler () {
   var form = $('#container #ajax-form form');
-  console.log(form);
   form.submit(function(event) {
     var addLink = function(data) {
       $('#links').prepend(data);

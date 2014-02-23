@@ -16,6 +16,7 @@ header {
   top: 0px;
   height: 80px;
   background: #1da34b;
+  z-index: 1;
 }
 
 main {
@@ -156,10 +157,6 @@ input.button_style:hover {
 
 /*------ Links feed styling ------*/
 
-#container {
-  width: 80%;
-  margin: 20px auto;
-}
 
 #container, .link {
   box-shadow: 0 0 5px black;
@@ -168,12 +165,18 @@ input.button_style:hover {
   background: #e8edee;
   margin: 15px inherit;
   padding: 15px 10px;
-  overflow: auto;
+  position: relative;
 }
 
 #container {
   background: #c8f3ca;
   padding: 15px 40px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+ul#links {
+  position: relative;
 }
 
 .title {
