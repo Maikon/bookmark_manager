@@ -1,5 +1,5 @@
 get '/sessions/new' do
-  erb :'sessions/new', :layout => !request.xhr?
+  erb :'sessions/new', layout: !request.xhr?
 end
 
 post '/sessions' do
