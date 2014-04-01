@@ -10,6 +10,7 @@ group :production do
   gem 'rack-flash3'
   gem 'sinatra-partial'
   gem 'poltergeist'
+  # gem 'selenium'
 end
 
 group :development, :test do
@@ -17,4 +18,5 @@ group :development, :test do
   gem 'rspec'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'tux'
 end

@@ -3,19 +3,19 @@ require_relative 'helpers/session'
 
 include SessionHelpers
 
-feature 'User adds a new link' do
+feature 'User adds a new link', type: :feature do
   before(:each) do
-    User.create(:email => 'test@test.com',
-                :password => 'test',
-                :password_confirmation => 'test')
+    User.create(email: 'test@test.com',
+                password: 'testpassword',
+                password_confirmation: 'testpassword')
   end
 
   scenario 'only after signing in' do
     expect(Link.count).to eq(0)
     visit '/'
-    expect(page).not_to have_content("Add New Link")
-    sign_in('test@test.com','test')
-    expect(page).to have_content("Add New Link")
+    expect(page).not_to have_content('Add New Link')
+    sign_in('test@test.com', 'testpassword')
+    expect(page).to have_content('Add New Link')
   end
 
   scenario 'when going to the links/new route' do
@@ -36,21 +36,21 @@ feature 'User adds a new link' do
     expect(link.tags.map(&:text)).to include('ruby')
   end
 
-  scenario 'from the homepage using an ajax form', :js => true do
+  scenario 'from the homepage using an ajax form' do
     visit '/'
+    sign_in('test@test.com', 'testpassword')
     click_link 'Add New Link'
-    add_link('http://www.example.com/','Example')
+    add_link('http://www.example.com/', 'Example')
     expect(page).to have_content('Example')
     expect(current_path).to eql('/')
   end
+end
 
-  def add_link(url,title, tags = [])
-    within('#new-link') do
-      fill_in 'url', :with => url
-      fill_in 'title', :with => title
-      fill_in 'tags', :with => tags.join(' ')
-      click_button 'Add Link'
-    end
+def add_link(url, title, tags = [])
+  within('#new-link') do
+    fill_in 'url',   with: url
+    fill_in 'title', with: title
+    fill_in 'tags',  with: tags.join(' ')
+    click_button 'Add Link'
   end
-
 end
